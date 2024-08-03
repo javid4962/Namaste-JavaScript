@@ -277,11 +277,35 @@ For Ex -
 
 ## ```-> Event Loop```
 
-  ![Alt Event loop](EventLoop.png)
+  ![Alt Event loop1](EventLoop.png)
+  
+  - After completing tasks inside of a's Execution Context it will be popped out of the call stack.
+  - Completing Execution of whole program code it popsout the `Global Execution Context`, now the call stack becomes empty.
+  
+  ![Alt Event loop1](EventLoop1.jpg)
+  
+  - Browser has super powers that are lent to JavaScript Engine to execute some tasks, these super powers include:
+  - Web API's 
+    - `console`
+    - `DOM API`
+    - `setTimeout`
+    - `fetch`
+    - `local storage`
+  
+  ![Alt Event loop2](EventLoop2.jpg)
 
+  - Callback functions and Event Handlers are first stored in Web API environment and then transfered to `callback queue`.
 
+  ![Alt Event loop3](EventLoop3.jpg)
+  
+  - `Promises` and `Mutation Observer` are stored in API environment and then transfered to `microtask queue`.
+  - `Event Loop` continuosly observes callstack and when it is empty it transfers task to `call stack`.
+  - `Microtask queue` is given priority over `callback tasks`.
+  - Too many microtasks generated can cause `Starvation` - Not giving time to callback tasks to execute.
+  
+  ![Alt Event loop4](EventLoop4.jpg)
 
-
+## ```-> JavaScript Runtime Environment```
 
 
 
