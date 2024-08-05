@@ -1,3 +1,21 @@
+// async function getData() {
+//   return "Namaste";
+// };
+
+
+// const dataPromise = getData();
+// dataPromise.then(res => console.log(res));
+// const p = new Promise((resolve, reject) => {
+//   resolve("Promise Resolved!");
+// });
+// async function getData() {
+//   return p;
+// }
+
+
+// const dataPromise = getData();
+// dataPromise.then(res => console.log(res));
+
 // const p1 = new Promise((resolve, reject)=>{
 // // setTimeout(()=>{
 //     resolve("Promise Resolved Value");
